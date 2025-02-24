@@ -20,7 +20,7 @@ const ContactBadge = ({
     <a
       href={href}
       target="_blank"
-      rel="noopener noreferrer"
+      rel="noopener"
       className={`flex items-center space-x-3 px-4 py-3 bg-secondary/30 hover:bg-secondary/50 ${cardStyles} group`}
     >
       <div className="p-2 rounded-lg bg-secondary">{icon}</div>

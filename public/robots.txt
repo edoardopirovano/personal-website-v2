@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://pirovano.co.uk/sitemap.xml 
