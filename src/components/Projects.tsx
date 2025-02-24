@@ -1,54 +1,57 @@
 import { motion } from "framer-motion";
 import type { Project } from "../types";
+import { cardStyles } from "../styles/common";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 
 const projects: Project[] = [
   {
     title: "Personal Website",
     description: "You're looking at it!",
-    technologies: ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
-    github: "https://github.com/edoardopirovano/personal-website-v2",
+    link: "https://github.com/edoardopirovano/personal-website-v2",
+    linkType: "github",
   },
   {
     title: "News Zap",
     description:
       "A site that sends you a daily email summarising the latest news.",
-    technologies: ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
     link: "https://www.news-zap.com/",
+    linkType: "website",
   },
   {
     title: "Pirovano Engineering",
     description:
       "A site for my dad's engineering (the real life kind!) company.",
-    technologies: ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
     link: "https://www.pirovanoengineering.it/",
-    github: "https://github.com/edoardopirovano/pirovano-engineering",
+    linkType: "website",
   },
   {
     title: "Probabilistic Swarm Verifier",
     description:
       "Code for my PhD thesis on verifying the behaviour of swarm robots.",
-    technologies: ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
-    github: "https://github.com/edoardopirovano/psv",
+    link: "https://github.com/edoardopirovano/psv",
+    linkType: "github",
   },
   {
-    title: "RL-Segmentation",
+    title: "RL Segmentation",
     description:
       "Code for my master's thesis on using reinforcement learning for medical image segmentation.",
-    technologies: ["Python", "PyTorch", "NumPy", "OpenCV"],
-    github: "https://github.com/edoardopirovano/rl-segmentation",
+    link: "https://github.com/edoardopirovano/rl-segmentation",
+    linkType: "github",
   },
   {
     title: "Investor Sentiment Analysis",
     description:
       "Code for my bachelor's group project on predicting stock prices from sentiment analysis of news articles and social media.",
-    technologies: ["Python", "PyTorch", "NumPy", "OpenCV"],
-    github: "https://github.com/edoardopirovano/investor-sentiment",
+    link: "https://github.com/edoardopirovano/investor-sentiment",
+    linkType: "github",
   },
 ];
 
 const Projects = () => {
   return (
-    <section id="projects" className="py-20 px-4 md:px-8 lg:px-16 bg-secondary">
+    <section id="projects" className="py-10 px-4 md:px-8 lg:px-16 bg-secondary">
       <div className="mx-auto max-w-7xl">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -61,53 +64,29 @@ const Projects = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <motion.div
+            <motion.a
               key={index}
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-primary p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow"
+              className={`bg-primary p-6 ${cardStyles} group relative hover:bg-primary/80 transition-colors`}
             >
-              <h3 className="text-xl font-semibold text-accent mb-2">
+              <h3 className="text-xl font-semibold text-accent mb-2 group-hover:text-text transition-colors">
                 {project.title}
               </h3>
-              <p className="text-gray-400 mb-4">{project.description}</p>
+              <p className="text-gray-400 mb-4 text-justify">
+                {project.description}
+              </p>
 
-              <div className="flex flex-wrap gap-2 mb-4">
-                {project.technologies.map((tech, techIndex) => (
-                  <span
-                    key={techIndex}
-                    className="px-2 py-1 bg-secondary text-sm rounded-full text-gray-300"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-
-              <div className="flex gap-4">
-                {project.link && (
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-accent hover:text-text transition-colors"
-                  >
-                    Live Website
-                  </a>
-                )}
-                {project.github && (
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-accent hover:text-text transition-colors"
-                  >
-                    GitHub
-                  </a>
-                )}
-              </div>
-            </motion.div>
+              <FontAwesomeIcon
+                icon={project.linkType === "github" ? faGithub : faGlobe}
+                className="absolute bottom-4 right-4 w-5 h-5 text-gray-400 group-hover:text-accent transition-colors"
+              />
+            </motion.a>
           ))}
         </div>
       </div>

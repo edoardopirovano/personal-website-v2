@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import type { Education as EducationType } from "../types";
+import { cardStyles } from "../styles/common";
 
 const educationList: EducationType[] = [
   {
@@ -19,7 +20,7 @@ const educationList: EducationType[] = [
 
 const Education = () => {
   return (
-    <section id="education" className="py-20 px-4 md:px-8 lg:px-16 bg-primary">
+    <section id="education" className="py-10 px-4 md:px-8 lg:px-16 bg-primary">
       <div className="mx-auto max-w-7xl">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -38,7 +39,7 @@ const Education = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-secondary p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow"
+              className={`bg-secondary p-6 ${cardStyles}`}
             >
               <h3 className="text-xl font-semibold text-accent">
                 {edu.degree}
@@ -48,7 +49,9 @@ const Education = () => {
                 <span className="text-gray-400 text-sm">{edu.year}</span>
               </div>
               {edu.description && (
-                <p className="mt-4 text-gray-400">{edu.description}</p>
+                <p className="mt-4 text-gray-400 text-justify">
+                  {edu.description}
+                </p>
               )}
             </motion.div>
           ))}

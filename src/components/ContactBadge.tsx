@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import { cardStyles } from "../styles/common";
 
 interface ContactBadgeProps {
   href: string;
@@ -20,7 +21,7 @@ const ContactBadge = ({
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="flex items-center space-x-3 px-4 py-3 bg-secondary/30 hover:bg-secondary/50 rounded-xl transition-all duration-300 border border-gray-700/50 hover:border-accent/50 group"
+      className={`flex items-center space-x-3 px-4 py-3 bg-secondary/30 hover:bg-secondary/50 ${cardStyles} group`}
     >
       <div className="p-2 rounded-lg bg-secondary">{icon}</div>
       <div className="flex-1">

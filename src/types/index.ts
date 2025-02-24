@@ -15,7 +15,6 @@ export interface Education {
 export interface Project {
   title: string;
   description: string;
-  technologies: string[];
-  link?: string;
-  github?: string;
+  link: string;
+  linkType: "github" | "website";
 }

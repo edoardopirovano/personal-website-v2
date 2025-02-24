@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import {
   faGraduationCap,
@@ -7,10 +6,44 @@ import {
   faEnvelope,
   faKey,
 } from "@fortawesome/free-solid-svg-icons";
+import LinkBadge from "./LinkBadge";
+
+const SOCIAL_LINKS = [
+  {
+    href: "https://github.com/edoardopirovano",
+    icon: faGithub,
+    label: "GitHub",
+  },
+  {
+    href: "https://linkedin.com/in/yourusername",
+    icon: faLinkedin,
+    label: "LinkedIn",
+  },
+  {
+    href: "https://scholar.google.co.uk/citations?user=DWwpJhEAAAAJ&hl=en",
+    icon: faGraduationCap,
+    label: "Scholar",
+  },
+  {
+    href: "https://dblp.org/pers/hd/p/Pirovano:Edoardo",
+    icon: faBook,
+    label: "DBLP",
+  },
+  {
+    href: "https://spamty.eu/show/v6/508/b7356af146b870064f3c4f9a/",
+    icon: faEnvelope,
+    label: "Email",
+  },
+  {
+    href: "https://keybase.io/edoardo",
+    icon: faKey,
+    label: "Keybase",
+  },
+];
 
 const Bio = () => {
   return (
-    <section id="bio" className="py-20 px-4 md:px-8 lg:px-16 bg-primary">
+    <section id="bio" className="py-10 px-4 md:px-8 lg:px-16 bg-primary">
       <div className="mx-auto max-w-7xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -22,7 +55,7 @@ const Bio = () => {
           <div className="md:w-1/3">
             <motion.div
               whileHover={{ scale: 1.05 }}
-              className="rounded-full overflow-hidden w-48 h-48 mx-auto"
+              className="rounded-full overflow-hidden w-64 h-64 mx-auto"
             >
               <img
                 src="/avatar.jpg"
@@ -58,7 +91,7 @@ const Bio = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.6 }}
-              className="text-gray-400"
+              className="text-gray-400 text-justify"
             >
               I&apos;m a software engineer specialising in developer tools, with
               a focus on testing and verification. I currently work at
@@ -77,60 +110,9 @@ const Bio = () => {
               className="flex flex-col sm:flex-row gap-4 mt-6"
             >
               <div className="grid grid-cols-2 md:grid-cols-3 gap-4 w-full">
-                <a
-                  href="https://github.com/edoardopirovano"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 hover:bg-accent/20 transition-colors"
-                >
-                  <FontAwesomeIcon icon={faGithub} className="w-5 h-5" />
-                  <span>GitHub</span>
-                </a>
-                <a
-                  href="https://linkedin.com/in/yourusername"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 hover:bg-accent/20 transition-colors"
-                >
-                  <FontAwesomeIcon icon={faLinkedin} className="w-5 h-5" />
-                  <span>LinkedIn</span>
-                </a>
-                <a
-                  href="https://scholar.google.co.uk/citations?user=DWwpJhEAAAAJ&hl=en"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 hover:bg-accent/20 transition-colors"
-                >
-                  <FontAwesomeIcon icon={faGraduationCap} className="w-5 h-5" />
-                  <span>Scholar</span>
-                </a>
-                <a
-                  href="https://dblp.org/pers/hd/p/Pirovano:Edoardo"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 hover:bg-accent/20 transition-colors"
-                >
-                  <FontAwesomeIcon icon={faBook} className="w-5 h-5" />
-                  <span>DBLP</span>
-                </a>
-                <a
-                  href="https://spamty.eu/show/v6/508/b7356af146b870064f3c4f9a/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 hover:bg-accent/20 transition-colors"
-                >
-                  <FontAwesomeIcon icon={faEnvelope} className="w-5 h-5" />
-                  <span>Email</span>
-                </a>
-                <a
-                  href="https://keybase.io/edoardo"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 hover:bg-accent/20 transition-colors"
-                >
-                  <FontAwesomeIcon icon={faKey} className="w-5 h-5" />
-                  <span>Keybase</span>
-                </a>
+                {SOCIAL_LINKS.map((link) => (
+                  <LinkBadge key={link.href} {...link} />
+                ))}
               </div>
             </motion.div>
           </div>

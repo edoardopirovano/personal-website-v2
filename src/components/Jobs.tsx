@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import type { Job } from "../types";
+import { cardStyles } from "../styles/common";
 
 const jobs: Job[] = [
   {
@@ -48,7 +49,7 @@ const jobs: Job[] = [
 
 const Jobs = () => {
   return (
-    <section id="jobs" className="py-20 px-4 md:px-8 lg:px-16 bg-secondary">
+    <section id="jobs" className="py-10 px-4 md:px-8 lg:px-16 bg-secondary">
       <div className="mx-auto max-w-7xl">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -67,14 +68,16 @@ const Jobs = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-primary p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow"
+              className={`bg-primary p-6 ${cardStyles}`}
             >
               <h3 className="text-xl font-semibold text-accent">{job.title}</h3>
               <div className="flex justify-between items-center mt-2">
                 <span className="text-gray-300">{job.company}</span>
                 <span className="text-gray-400 text-sm">{job.period}</span>
               </div>
-              <p className="mt-4 text-gray-400">{job.description}</p>
+              <p className="mt-4 text-gray-400 text-justify">
+                {job.description}
+              </p>
             </motion.div>
           ))}
         </div>

@@ -16,7 +16,7 @@ function App() {
   return (
     <div className="min-h-screen bg-primary text-text m-0 flex flex-col">
       <Navbar />
-      <main className="pt-4 flex-grow">
+      <main className="pt-16 flex-grow">
         <Bio />
         <Jobs />
         <Education />
