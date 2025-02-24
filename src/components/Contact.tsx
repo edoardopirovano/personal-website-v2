@@ -49,7 +49,6 @@ const Contact = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <h3 className="text-xl font-semibold mb-4">Send me a message</h3>
             <form
               action="https://formspree.io/f/xknpqkkw"
               method="POST"
@@ -102,9 +101,9 @@ const Contact = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
+            className="flex items-center"
           >
-            <h3 className="text-xl font-semibold mb-6">Connect with me</h3>
-            <div className="flex flex-col space-y-4">
+            <div className="flex flex-col space-y-4 w-full">
               {CONTACT_OPTIONS.map((option) => (
                 <ContactBadge key={option.href} {...option} />
               ))}
