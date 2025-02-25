@@ -15,7 +15,7 @@ const SOCIAL_LINKS = [
     label: "GitHub",
   },
   {
-    href: "https://linkedin.com/in/yourusername",
+    href: "https://linkedin.com/in/edoardopirovano",
     icon: faLinkedin,
     label: "LinkedIn",
   },
