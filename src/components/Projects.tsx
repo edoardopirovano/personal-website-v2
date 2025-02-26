@@ -20,6 +20,13 @@ const projects: Project[] = [
     linkType: "website",
   },
   {
+    title: "Rosanna's Recipes",
+    description:
+      "A recreation of a recipe site my grandad made for my grandmother.",
+    link: "https://www.rosanna-recipes.co.uk/",
+    linkType: "website",
+  },
+  {
     title: "Pirovano Engineering",
     description:
       "A site for my dad's engineering (the real life kind!) company.",
@@ -38,13 +45,6 @@ const projects: Project[] = [
     description:
       "Code for my master's thesis on using reinforcement learning for medical image segmentation.",
     link: "https://github.com/edoardopirovano/rl-segmentation",
-    linkType: "github",
-  },
-  {
-    title: "Investor Sentiment Analysis",
-    description:
-      "Code for my bachelor's group project on predicting stock prices from sentiment analysis of news articles and social media.",
-    link: "https://github.com/edoardopirovano/investor-sentiment",
     linkType: "github",
   },
 ];
