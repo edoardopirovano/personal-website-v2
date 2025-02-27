@@ -73,9 +73,9 @@ const Projects = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className={`bg-primary p-6 ${cardStyles} group relative hover:bg-primary/80 transition-colors`}
+              className={`bg-primary p-6 ${cardStyles} group relative hover:bg-primary/80`}
             >
-              <h3 className="text-xl font-semibold text-accent mb-2 group-hover:text-text transition-colors">
+              <h3 className="text-xl font-semibold text-accent mb-2 group-hover:text-text">
                 {project.title}
               </h3>
               <p className="text-gray-400 mb-4 text-justify">
@@ -84,7 +84,7 @@ const Projects = () => {
 
               <FontAwesomeIcon
                 icon={project.linkType === "github" ? faGithub : faGlobe}
-                className="absolute bottom-4 right-4 w-5 h-5 text-gray-400 group-hover:text-accent transition-colors"
+                className="absolute bottom-4 right-4 w-5 h-5 text-gray-400 group-hover:text-accent"
               />
             </motion.a>
           ))}

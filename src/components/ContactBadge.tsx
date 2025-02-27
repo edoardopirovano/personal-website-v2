@@ -25,14 +25,12 @@ const ContactBadge = ({
     >
       <div className="p-2 rounded-lg bg-secondary">{icon}</div>
       <div className="flex-1">
-        <h4 className="font-medium group-hover:text-accent transition-colors">
-          {title}
-        </h4>
+        <h4 className="font-medium group-hover:text-accent">{title}</h4>
         <p className="text-sm text-gray-400">{description}</p>
       </div>
       <FontAwesomeIcon
         icon={faChevronRight}
-        className="w-5 h-5 text-gray-400 group-hover:text-accent transition-colors"
+        className="w-5 h-5 text-gray-400 group-hover:text-accent"
       />
     </a>
   );

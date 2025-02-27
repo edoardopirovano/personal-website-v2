@@ -30,7 +30,7 @@ const Navbar = () => {
               <motion.a
                 key={item.href}
                 href={item.href}
-                className="text-text hover:text-accent transition-colors"
+                className="text-text hover:text-accent"
                 whileHover={{ y: -2 }}
                 whileTap={{ y: 0 }}
               >
@@ -75,7 +75,7 @@ const Navbar = () => {
                 <a
                   key={item.href}
                   href={item.href}
-                  className="block px-3 py-2 text-text hover:text-accent transition-colors"
+                  className="block px-3 py-2 text-text hover:text-accent"
                   onClick={() => setIsOpen(false)}
                 >
                   {item.label}
