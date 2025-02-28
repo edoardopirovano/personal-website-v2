@@ -97,8 +97,8 @@ const Bio = () => {
               a focus on testing and verification. I currently work at
               Meticulous, where I&apos;m developing software to fully automate
               website testing. Before joining Meticulous, I worked in static
-              code analysis at Lacework and GitHub. And before then, I was a PhD
-              student at Imperial College London where I carried out research on
+              code analysis at Lacework and GitHub. And before then, I did a PhD
+              at Imperial College London where I carried out research on
               verifying the safety of AI systems.
             </motion.p>
 
