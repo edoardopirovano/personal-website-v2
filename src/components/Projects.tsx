@@ -23,7 +23,7 @@ const projects: Project[] = [
     title: "FreezeFlag",
     description:
       "Website to warn you when the temperature is about to drop below freezing.",
-    link: "https://www.freeze-flag.com/",
+    link: "https://www.freezeflag.com/",
     linkType: "website",
   },
   {
