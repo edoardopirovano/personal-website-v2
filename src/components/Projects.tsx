@@ -20,6 +20,13 @@ const projects: Project[] = [
     linkType: "website",
   },
   {
+    title: "FreezeFlag",
+    description:
+      "Website to warn you when the temperature is about to drop below freezing.",
+    link: "https://www.freeze-flag.com/",
+    linkType: "website",
+  },
+  {
     title: "Rosanna's Recipes",
     description:
       "A recreation of a recipe site my grandad made for my grandmother.",
@@ -40,13 +47,13 @@ const projects: Project[] = [
     link: "https://github.com/edoardopirovano/psv",
     linkType: "github",
   },
-  {
-    title: "RL Segmentation",
-    description:
-      "Code for my master's thesis on using reinforcement learning for medical image segmentation.",
-    link: "https://github.com/edoardopirovano/rl-segmentation",
-    linkType: "github",
-  },
+  // {
+  //   title: "RL Segmentation",
+  //   description:
+  //     "Code for my master's thesis on using reinforcement learning for medical image segmentation.",
+  //   link: "https://github.com/edoardopirovano/rl-segmentation",
+  //   linkType: "github",
+  // },
 ];
 
 const Projects = () => {
