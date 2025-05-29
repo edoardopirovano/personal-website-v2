@@ -60,6 +60,13 @@ const projects: Project[] = [
     link: "https://github.com/edoardopirovano/rl-segmentation",
     linkType: "github",
   },
+  {
+    title: "Investor Sentiment Tracker",
+    description:
+      "Code for my second year group project on whether investor sentiment is predictive of stock prices.",
+    link: "https://github.com/edoardopirovano/investor-sentiment",
+    linkType: "github",
+  },
 ];
 
 const Projects = () => {
