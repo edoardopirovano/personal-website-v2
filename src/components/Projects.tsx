@@ -34,6 +34,12 @@ const projects: Project[] = [
     linkType: "website",
   },
   {
+    title: "G-GAJB",
+    description: "Landing page for an aircraft that I jointly own.",
+    link: "https://www.gajb.co.uk/",
+    linkType: "website",
+  },
+  {
     title: "Pirovano Engineering",
     description:
       "A site for my dad's engineering (the real life kind!) company.",
@@ -47,13 +53,13 @@ const projects: Project[] = [
     link: "https://github.com/edoardopirovano/psv",
     linkType: "github",
   },
-  // {
-  //   title: "RL Segmentation",
-  //   description:
-  //     "Code for my master's thesis on using reinforcement learning for medical image segmentation.",
-  //   link: "https://github.com/edoardopirovano/rl-segmentation",
-  //   linkType: "github",
-  // },
+  {
+    title: "RL Segmentation",
+    description:
+      "Code for my master's thesis on using reinforcement learning for medical image segmentation.",
+    link: "https://github.com/edoardopirovano/rl-segmentation",
+    linkType: "github",
+  },
 ];
 
 const Projects = () => {
