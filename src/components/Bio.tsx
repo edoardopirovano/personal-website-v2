@@ -4,7 +4,7 @@ import {
   faGraduationCap,
   faBook,
   faEnvelope,
-  faKey,
+  faFilePdf,
 } from "@fortawesome/free-solid-svg-icons";
 import LinkBadge from "./LinkBadge";
 
@@ -35,9 +35,9 @@ const SOCIAL_LINKS = [
     label: "Email",
   },
   {
-    href: "https://keybase.io/edoardo",
-    icon: faKey,
-    label: "Keybase",
+    href: "/cv.pdf",
+    icon: faFilePdf,
+    label: "CV",
   },
 ];
 
